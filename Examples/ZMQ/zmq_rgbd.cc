@@ -50,7 +50,6 @@ int main(int argc, char **argv)
         socket.recv(&mr_data_d);
 
         // to cv::Mat
-        std::cout << metadata["shape"][0] << "x" << metadata["shape"][1] << std::endl;
         cv::Mat rgb_img(metadata["shape"][0], metadata["shape"][1], CV_8UC3, mr_data_rgb.data());
         cv::Mat d_img(metadata["shape"][0], metadata["shape"][1], CV_32FC1, mr_data_d.data());
 
